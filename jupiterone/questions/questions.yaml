@@ -37,3 +37,22 @@ questions:
   tags:
   - fastly
   - network
+
+- id: managed-question-network-fastly-domain-no-sslcertcheck
+  title: Which Fastly network domains do not have a SSLcertcheck?
+  description: Returns a list of Fastly domains that do not have a SSLcertcheck.
+  queries:
+  - query: |
+      FIND fastly_service that CONNECTS DomainRecord WITH sslCheckCert != true
+  tags:
+  - fastly
+  - network
+
+- id: managed-question-fastly-superuser-that-has-no-MFA
+  title: Which Fastly superusers that do not require Multi-factor Authentication?
+  description: Returns a list of Fastly superusers that do not require or enable Multi-factor Authentication.
+  queries:
+  - query: |
+      FIND UNIQUE fastly_user WITH (mfaSetupRequired != true AND mfaEnabled != true AND role ~= "superuser")
+  tags:
+  - fastly
