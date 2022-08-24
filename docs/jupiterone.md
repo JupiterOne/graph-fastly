@@ -1,4 +1,4 @@
-# Integration with JupiterOne
+# Fastly
 
 ## Fastly + JupiterOne Integration Benefits
 
@@ -45,7 +45,7 @@ To conigure this integration you should have an account in Fastly and create an
 
 ### In JupiterOne
 
-1. From the configuration **Gear Icon**, select **Integrations**.
+1. From the top navigation of the J1 Search homepage, select **Integrations**
 2. Scroll to the **Fastly** integration tile and click it.
 3. Click the **Add Configuration** button and configure the following settings:
 
@@ -65,7 +65,7 @@ To conigure this integration you should have an account in Fastly and create an
 
 ## How to Uninstall
 
-1. From the configuration **Gear Icon**, select **Integrations**.
+1. From the top navigation of the J1 Search homepage, select **Integrations**
 2. Scroll to the **Fastly** integration tile and click it.
 3. Identify and click the **integration to delete**.
 4. Click the **trash can** icon.
