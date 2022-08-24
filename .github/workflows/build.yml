@@ -23,8 +23,10 @@ jobs:
 
       - name: Run tests
         env:
-          MANAGED_QUESTIONS_JUPITERONE_ACCOUNT_ID: ${{ secrets.MANAGED_QUESTIONS_JUPITERONE_ACCOUNT_ID }}
-          MANAGED_QUESTIONS_JUPITERONE_API_KEY: ${{ secrets.MANAGED_QUESTIONS_JUPITERONE_API_KEY }}
+          MANAGED_QUESTIONS_JUPITERONE_ACCOUNT_ID:
+            ${{ secrets.MANAGED_QUESTIONS_JUPITERONE_ACCOUNT_ID }}
+          MANAGED_QUESTIONS_JUPITERONE_API_KEY:
+            ${{ secrets.MANAGED_QUESTIONS_JUPITERONE_API_KEY }}
         run: yarn test:ci
 
       - name: Run build
@@ -90,6 +92,7 @@ jobs:
           tag_name: ${{ steps.changelog_reader.outputs.version }}
           release_name: Release ${{ steps.changelog_reader.outputs.version }}
           body: ${{ steps.changelog_reader.outputs.changes }}
-          prerelease: ${{ steps.changelog_reader.outputs.status == 'prereleased' }}
+          prerelease:
+            ${{ steps.changelog_reader.outputs.status == 'prereleased' }}
           draft: ${{ steps.changelog_reader.outputs.status == 'unreleased' }}
         continue-on-error: true
