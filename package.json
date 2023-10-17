@@ -2,6 +2,10 @@
   "name": "@jupiterone/graph-fastly",
   "version": "1.0.0",
   "description": "A graph conversion tool for https://www.fastly.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JupiterOne/graph-fastly"
+  },
   "license": "MPL-2.0",
   "main": "src/index.js",
   "types": "src/index.d.ts",
